@@ -18,10 +18,7 @@
 
 ## 🖼️ 效果预览
 
-*(👇 提示：这里将替换为你的项目演示 GIF。你可以用手机录屏电脑操作，或截图拼接，效果极佳！)*
-
-![MarkPrism Demo](https://via.placeholder.com/800x400/2d3748/ffffff?text=MarkPrism+Demo+GIF+Here)
-*左：原始 Markdown | 右：MarkPrism 转换后的精美排版*
+ **在线演示即将上线**（正在部署中...）
 
 ---
 
