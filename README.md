@@ -1,2 +1,47 @@
-# MarkPrism
-A beautiful Markdown to Social Media converter. One-click formatting for Xiaohongshu, WeChat, and more. ✨
+# 🌈 MarkPrism
+
+> 一束普通的 Markdown 文本，穿过 MarkPrism，瞬间折射出适合各大社交媒体的绚丽排版。✨
+
+**MarkPrism** 是一个轻量、纯前端的 Markdown 转社交媒体排版工具。它解决了开发者和技术博主在将 Markdown 笔记发布到小红书、微信公众号、知乎等平台时，手动调整格式、添加 Emoji、处理代码块样式的痛点。
+
+---
+
+## ✨ 核心特性
+
+- 🚀 **一键多端适配**：内置「小红书」、「微信公众号」专属排版规则，一键切换，秒级转换。
+- 🎨 **智能 Emoji 注入**：自动识别标题层级，为 H1/H2/H3 智能匹配高颜值 Emoji，让文章瞬间拥有“网感”。
+- 📋 **完美富文本复制**：针对微信公众号深度优化，自动将 CSS 转换为**内联样式 (Inline CSS)**，直接粘贴到微信后台，格式丝毫不乱。
+- 💻 **极客级代码块美化**：自带深色模式、圆角阴影、仿 macOS 红黄绿窗口控制点，让你的技术分享更具专业感。
+- 🔒 **100% 隐私安全**：纯前端本地处理（或浏览器端处理），你的草稿和代码**永远不会**上传到任何服务器。
+
+---
+
+## 🖼️ 效果预览
+
+*(👇 提示：这里将替换为你的项目演示 GIF。你可以用手机录屏电脑操作，或截图拼接，效果极佳！)*
+
+![MarkPrism Demo](https://via.placeholder.com/800x400/2d3748/ffffff?text=MarkPrism+Demo+GIF+Here)
+*左：原始 Markdown | 右：MarkPrism 转换后的精美排版*
+
+---
+
+## 🚀 快速开始
+
+### 方式一：在线体验 (推荐)
+无需安装，打开即用！
+👉 [点击这里访问在线演示 (Coming Soon)](#) 
+*(注：当你将项目部署到 Vercel/Netlify 后，请将 # 替换为你的真实链接)*
+
+### 方式二：本地运行 (开发者)
+如果你想在本地贡献代码或自定义样式：
+
+```bash
+# 1. 克隆仓库
+git clone https://github.com/WikiStf/MarkPrism.git
+
+# 2. 进入目录并安装依赖
+cd MarkPrism
+npm install
+
+# 3. 启动开发服务器
+npm run dev
