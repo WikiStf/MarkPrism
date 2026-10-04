@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- 全局基础 ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f7f7fb] text-gray-900;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.18);
+}
+
+/* 细滚动条，编辑器/预览区更精致 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #d8dae8;
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #b8bcd6;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 预览区（mp-preview）增强样式 ---------- */
+/* 转换结果本身全部是内联样式；这里只补充"仅预览可见、不影响复制"的交互细节 */
+
+.mp-preview {
+  min-height: 200px;
+}
+
+/* 代码块：悬停时出现阴影反馈；横向滚动条做深色适配 */
+.mp-preview pre {
+  transition: box-shadow 0.2s ease;
+}
+.mp-preview section:hover > pre {
+  box-shadow: inset 0 0 0 1px #313244;
+}
+.mp-preview pre::-webkit-scrollbar {
+  height: 6px;
+}
+.mp-preview pre::-webkit-scrollbar-thumb {
+  background: #45475a;
+}
+.mp-preview pre::-webkit-scrollbar-thumb:hover {
+  background: #585b70;
+}
+
+/* 行号禁止选中：复制代码时不会把 gutter 带进去 */
+.mp-preview pre span[style*="user-select"] {
+  user-select: none;
+}
+
+/* 复制按钮 hover 态（内联样式无法写 :hover，用 CSS 补充） */
+.mp-preview [data-copy-code]:hover {
+  border-color: #89b4fa !important;
+  background: rgba(137, 180, 250, 0.12) !important;
+}
+
+/* 图片加载失败时的优雅降级 */
+.mp-preview img {
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* 表格横向可滚（宽表在手机上不至于撑爆） */
+.mp-preview table {
+  display: block;
+  overflow-x: auto;
+}
+
+/* ---------- 移动端优化 ---------- */
+@media (max-width: 640px) {
+  /* iOS 上字号 <16px 的输入框聚焦会放大页面，这里强制修正 */
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 尊重用户的减少动效偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
